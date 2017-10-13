@@ -1,0 +1,16 @@
+task main()
+{
+   SetSensorTouch(IN_1);
+   ClearScreen();
+   until(Sensor(IN_1)==1)
+   until(Sensor(IN_1)==0)
+   repeat(2){
+     TextOut(	15,35,"Hello Everyone");
+     PlayTone(TONE_C4, MS_900);
+     Wait(1000);
+   }
+     
+}
+
+
+
