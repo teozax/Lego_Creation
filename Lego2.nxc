@@ -1,0 +1,18 @@
+task main()
+{
+   SetSensorTouch(IN_1);
+   ClearScreen();
+   while(1){
+     until(Sensor(IN_1)==1);
+     until(Sensor(IN_1)==0);
+     TextOut(7,35,"Hello Everyone");
+     PlayTone(TONE_C4, MS_900);
+     Wait(2000);
+     ClearScreen();
+
+   }
+
+}
+
+
+

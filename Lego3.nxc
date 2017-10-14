@@ -1,0 +1,23 @@
+task main()
+{
+   SetSensorTouch(IN_1);
+   while(1){
+      while(Sensor(IN_1)==1){
+         ClearScreen();
+         OnFwd(OUT_B,50);
+         TextOut(5,24,"Motor is Moving");
+         Wait(5);
+      }
+      while(Sensor(IN_1)==0){
+         ClearScreen();
+         Off(OUT_B);
+         TextOut(5,24,"Motor is not");
+         TextOut(5,23,"Moving");
+         Wait(5);
+      }
+   }
+     
+}
+
+
+

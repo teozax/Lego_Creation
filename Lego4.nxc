@@ -1,0 +1,24 @@
+task main()
+{
+   SetSensorTouch(IN_1);
+   while(1){
+      ClearScreen();
+      while(Sensor(IN_1)==1){
+         RotateMotor(OUT_B,70,90);
+         TextOut(5,24,"Motor is Moving");
+         TextOut(5,23,"Forward");
+         Wait(5);
+      }
+      ClearScreen();
+      while(Sensor(IN_1)==0){
+         RotateMotor(OUT_B,70,-90);
+         TextOut(5,24,"Motor is Moving");
+         TextOut(5,23,"Backward");
+         Wait(5);
+      }
+   }
+
+}
+
+
+
